@@ -1,0 +1,29 @@
+// Paso 1: Establecer la fecha de tu boda.
+// ¡IMPORTANTE! Cambia esta fecha y hora por la de tu evento.
+const fechaBoda = new Date("December 13, 2025 14:00:00").getTime();
+
+// Paso 2: Actualizar la cuenta regresiva cada 1 segundo.
+const x = setInterval(function() {
+
+    const ahora = new Date().getTime();
+    const distancia = fechaBoda - ahora;
+
+    // Calcular los días, horas, minutos y segundos
+    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+    // Muestra los números en el HTML
+    document.getElementById(" dias").innerHTML = dias;
+    document.getElementById(" horas").innerHTML = horas;
+    document.getElementById(" minutos").innerHTML = minutos;
+    document.getElementById(" segundos").innerHTML = segundos;
+
+    // Si la cuenta regresiva ha terminado, mostrar un mensaje
+    if (distancia < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "¡Es el gran día!";
+        // Opcional: Oculta los títulos de 'Días', 'Horas', etc. si lo deseas.
+    }
+}, 1000);

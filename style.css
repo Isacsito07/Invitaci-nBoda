@@ -1,0 +1,163 @@
+/*
+ * Estilos generales y tipografía
+ */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #444;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #8A4A8E; /* Color principal para los títulos */
+}
+
+a {
+    text-decoration: none;
+    color: #8A4A8E;
+}
+
+/*
+ * Sección de la portada (header)
+ */
+.portada {
+    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    background-image: url('imagen-evento.jpg.JPG'); /* Asegúrate de que esta ruta sea correcta */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* Texto blanco para que resalte sobre la imagen */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para el texto */
+}
+
+.portada-contenido {
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para mejor lectura */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.nombres {
+    font-size: 4em;
+    margin: 0;
+}
+
+.fecha-boda {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+/*
+ * Sección del contador y otros contenedores
+ */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contador {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: transparent;  
+}
+
+#countdown {text-align: center;
+    padding: 60px 20px;
+    background-color: transparent;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Estilo para cada "unidad" de tiempo (caja) */
+.unidad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente para la caja */
+    padding: 20px 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el número */
+.unidad span:first-child {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1b1616;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo para el texto (DÍAS, HRS, etc.) */
+.unidad .etiqueta {
+    font-size: 0.9em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #1d1b1b;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.boton-mapa, .boton {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    background-color: #8A4A8E;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton-mapa:hover, .boton:hover {
+    background-color: #6a3a6e;
+}
+
+/*
+ * Estilos para la sección de información extra
+ */
+.informacion-extra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/*
+ * Pie de página (footer)
+ */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+/*
+ * Media Queries para adaptar el diseño a móviles
+ */
+@media (max-width: 768px) {
+    .nombres {
+        font-size: 2.5em;
+    }
+
+    #countdown {
+        font-size: 1.5em;
+    }
+
+    .detalles-evento {
+        flex-direction: column; /* Apila los divs verticalmente */
+    }
+}
